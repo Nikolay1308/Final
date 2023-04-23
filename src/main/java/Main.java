@@ -8,9 +8,7 @@ import java.time.Duration;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("web-driver.chrome.driver", "C:\\Users\\nikol\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get("https://www.amazon.com/?language=en_US");
