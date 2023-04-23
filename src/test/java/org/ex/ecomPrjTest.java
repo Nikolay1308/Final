@@ -21,9 +21,7 @@ public class ecomPrjTest {
     public void initializeSelenium() {
         //מגדיר את ה-webdriver.chrome.driver שהוא מפתח קבוע עם ערך הנתיב
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\nikol\\Downloads\\chromedriver_win32\\chromedriver.exe");// מיקום של הדרייבר
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();//פותח חלון של דפדפן על כל המסך
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
